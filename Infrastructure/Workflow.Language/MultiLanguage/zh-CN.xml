@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources>
+    <Language>zh-CHS</Language>
+    <Version>V1.0</Version>
+    <Description>中文简体语言包</Description>
+    <Items>
+        <item Key="Workflow" describe="" abbreviation=""><![CDATA[工作流]]></item>
+        <item Key="Workflow_ID" describe="" abbreviation=""><![CDATA[编号]]></item>
+        <item Key="Workflow_Type" describe="" abbreviation=""><![CDATA[流程类型]]></item>
+        <item Key="Workflow_Name" describe="" abbreviation=""><![CDATA[流程名称]]></item>
+        <item Key="Workflow_FullName" describe="" abbreviation=""><![CDATA[流程命名空间]]></item>
+        <item Key="Workflow_DefinitionLibrary" describe="" abbreviation=""><![CDATA[流程定义程序集]]></item>
+        <item Key="Workflow_CreateTime" describe="" abbreviation=""><![CDATA[创建时间]]></item>
+        <item Key="Workflow_Version" describe="" abbreviation=""><![CDATA[版本]]></item>
+        <item Key="Workflow_CurrentVersion" describe="" abbreviation=""><![CDATA[当前版本]]></item>
+    </Items>
+</Resources>

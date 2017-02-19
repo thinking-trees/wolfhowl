@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{473AD197-CBF8-41E6-9AF2-199C638ED151}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Workflow.Platform.Data</RootNamespace>
+    <AssemblyName>Workflow.Platform.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\ReferenceFiles\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Mapping\ActivityInfoTypeMap.cs" />
+    <Compile Include="Mapping\HastenHistoryTypeMap.cs" />
+    <Compile Include="Mapping\HastenSettingTypeMap.cs" />
+    <Compile Include="Mapping\HastenTaskTypeMap.cs" />
+    <Compile Include="Mapping\ProcessedInstanceTypeMap.cs" />
+    <Compile Include="Mapping\ProcessingInstanceTypeMap.cs" />
+    <Compile Include="Mapping\SerialNumberTypeMap.cs" />
+    <Compile Include="Mapping\WorkflowInfoTypeMap.cs" />
+    <Compile Include="Mapping\WorkflowInstanceInfoTypeMap.cs" />
+    <Compile Include="Mapping\WorkflowInstanceLogTypeMap.cs" />
+    <Compile Include="Mapping\WorkflowRoleTypeMap.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ActivityInfoRepository.cs" />
+    <Compile Include="Repositories\HastenHistoryRepository.cs" />
+    <Compile Include="Repositories\HastenSettingRepository.cs" />
+    <Compile Include="Repositories\HastenTaskRepository..cs" />
+    <Compile Include="Repositories\ProcessedInstanceRepository.cs" />
+    <Compile Include="Repositories\ProcessingInstanceRepository.cs" />
+    <Compile Include="Repositories\Repository.cs" />
+    <Compile Include="Repositories\SerialNumberRepository.cs" />
+    <Compile Include="Repositories\WorkflowInfoRepository.cs" />
+    <Compile Include="Repositories\WorkflowInstanceInfoRepository.cs" />
+    <Compile Include="Repositories\WorkflowInstanceLogRepository.cs" />
+    <Compile Include="Repositories\WorkflowRoleRepository.cs" />
+    <Compile Include="UnitOfWork\WorkflowDbContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\Workflow.Domain\Workflow.Domain.csproj">
+      <Project>{D190E69A-EB4A-4B00-A8EE-CFD0821618D9}</Project>
+      <Name>Workflow.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
