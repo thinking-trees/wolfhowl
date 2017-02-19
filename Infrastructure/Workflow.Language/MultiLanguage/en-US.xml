@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources>
+    <Language>en-US</Language>
+    <Version>V1.0</Version>
+    <Description>English</Description>
+    <Items>
+      <item Key="Workflow" describe="" abbreviation=""><![CDATA[WORKFLOW]]></item>
+    </Items>
+</Resources>

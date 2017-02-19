@@ -1,0 +1,144 @@
+﻿<Activity mc:Ignorable="sads sap" x:Class="Workflow.Test.AlarmOrder.AlarmOrderProcess"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mv="clr-namespace:Microsoft.VisualBasic;assembly=System"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:s="clr-namespace:System;assembly=mscorlib"
+ xmlns:s1="clr-namespace:System;assembly=System"
+ xmlns:s2="clr-namespace:System;assembly=System.Xml"
+ xmlns:s3="clr-namespace:System;assembly=System.Core"
+ xmlns:s4="clr-namespace:System;assembly=System.ServiceModel"
+ xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities"
+ xmlns:sad="clr-namespace:System.Activities.Debugger;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System"
+ xmlns:scg1="clr-namespace:System.Collections.Generic;assembly=System.ServiceModel"
+ xmlns:scg2="clr-namespace:System.Collections.Generic;assembly=System.Core"
+ xmlns:scg3="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sd="clr-namespace:System.Data;assembly=System.Data"
+ xmlns:sl="clr-namespace:System.Linq;assembly=System.Core"
+ xmlns:st="clr-namespace:System.Text;assembly=mscorlib"
+ xmlns:wac="clr-namespace:Workflow.Activities.CustomActivities;assembly=Workflow"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="instanceName" Type="InArgument(x:String)" />
+    <x:Property Name="createUserID" Type="InArgument(x:String)" />
+    <x:Property Name="createUserName" Type="InArgument(x:String)" />
+    <x:Property Name="nextActivityID" Type="InArgument(x:Int32)" />
+    <x:Property Name="nextUserID" Type="InArgument(x:String)" />
+    <x:Property Name="nextUserName" Type="InArgument(x:String)" />
+    <x:Property Name="comment" Type="InArgument(x:String)" />
+    <x:Property Name="basicBusinessInfo" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>654,676</sap:VirtualizedContainerService.HintSize>
+  <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
+  <Flowchart DisplayName="告警工单处理流程" sad:XamlDebuggerXmlReader.FileName="D:\Code\Workflow\Workflow.Library\Workflow.Test.AlarmOrder\AlarmOrderProcess.xaml" sap:VirtualizedContainerService.HintSize="614,636">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="x:String" Name="flowOperation" />
+    </Flowchart.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+        <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+        <av:Size x:Key="ShapeSize">60,75</av:Size>
+        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,109</av:PointCollection>
+      </scg3:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart.StartNode>
+      <FlowStep x:Name="__ReferenceID1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">200,109</av:Point>
+            <av:Size x:Key="ShapeSize">200,22</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,131 300,199</av:PointCollection>
+          </scg3:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <wac:InitializeActivity CurrentUserID="{x:Null}" CurrentUserName="{x:Null}" FlowOperation="{x:Null}" ActivityType="Initialize" BasicBusinessInfo="[basicBusinessInfo]" Comment="[comment]" CreateUserID="[createUserID]" CreateUserName="[createUserName]" CurrentActivityID="[nextActivityID]" DisplayName="010_告警工单发起" sap:VirtualizedContainerService.HintSize="200,22" InstanceName="[instanceName]" State="010">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg3:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </wac:InitializeActivity>
+        <FlowStep.Next>
+          <FlowStep x:Name="__ReferenceID0">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                <av:Point x:Key="ShapeLocation">200,199</av:Point>
+                <av:Size x:Key="ShapeSize">200,22</av:Size>
+                <av:PointCollection x:Key="ConnectorLocation">300,221 300,289</av:PointCollection>
+              </scg3:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <wac:PerformActivity FlowOperation="{x:Null}" ActivityType="Perform" BasicBusinessInfo="[basicBusinessInfo]" Comment="[comment]" CurrentActivityID="[nextActivityID]" CurrentUserID="[nextUserID]" CurrentUserName="[nextUserName]" DisplayName="020_告警工单处理" sap:VirtualizedContainerService.HintSize="200,22" IsPersistence="True" IsResume="True" State="020">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg3:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </wac:PerformActivity>
+            <FlowStep.Next>
+              <FlowStep x:Name="__ReferenceID2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">200,289</av:Point>
+                    <av:Size x:Key="ShapeSize">200,22</av:Size>
+                    <av:PointCollection x:Key="ConnectorLocation">300,311 300,356.5</av:PointCollection>
+                  </scg3:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <wac:PerformActivity ActivityType="Perform" BasicBusinessInfo="[basicBusinessInfo]" Comment="[comment]" CurrentActivityID="[nextActivityID]" CurrentUserID="[nextUserID]" CurrentUserName="[nextUserName]" DisplayName="030_审核告警工单" FlowOperation="[flowOperation]" sap:VirtualizedContainerService.HintSize="200,22" IsPersistence="True" IsResume="True" State="030">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg3:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </wac:PerformActivity>
+                <FlowStep.Next>
+                  <FlowDecision x:Name="__ReferenceID3" Condition="[flowOperation.ToString() Is &quot;1&quot;]" sap:VirtualizedContainerService.HintSize="70,87">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <av:Point x:Key="ShapeLocation">265,356.5</av:Point>
+                        <av:Size x:Key="ShapeSize">70,87</av:Size>
+                        <x:String x:Key="TrueLabel">已解决</x:String>
+                        <x:String x:Key="FalseLabel">未解决</x:String>
+                        <av:PointCollection x:Key="TrueConnector">265,400 180,400 180,500 210,500</av:PointCollection>
+                        <av:PointCollection x:Key="FalseConnector">335,400 430,400 430,210 400,210</av:PointCollection>
+                      </scg3:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <FlowDecision.True>
+                      <FlowStep x:Name="__ReferenceID4">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">210,489</av:Point>
+                            <av:Size x:Key="ShapeSize">200,22</av:Size>
+                          </scg3:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <wac:EndActivity ActivityType="End" DisplayName="End" sap:VirtualizedContainerService.HintSize="200,22" State="End">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg3:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </wac:EndActivity>
+                      </FlowStep>
+                    </FlowDecision.True>
+                    <FlowDecision.False>
+                      <x:Reference>__ReferenceID0</x:Reference>
+                    </FlowDecision.False>
+                  </FlowDecision>
+                </FlowStep.Next>
+              </FlowStep>
+            </FlowStep.Next>
+          </FlowStep>
+        </FlowStep.Next>
+      </FlowStep>
+    </Flowchart.StartNode>
+    <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID0</x:Reference>
+    <x:Reference>__ReferenceID2</x:Reference>
+    <x:Reference>__ReferenceID3</x:Reference>
+    <x:Reference>__ReferenceID4</x:Reference>
+  </Flowchart>
+</Activity>

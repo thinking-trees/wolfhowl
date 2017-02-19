@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Workflow>
+    <Namespaces>
+        <Namespace name="CustomActivity" prefix="wac" type="clr-namespace:Workflow.Activities.CustomActivities;assembly=Workflow" />
+    </Namespaces>
+    <Activities>
+        <Activity name="InitializeActivity" />
+        <Activity name="PerformActivity" />
+        <Activity name="HastenActivity" />
+        <Activity name="ForwardActivity" />
+        <Activity name="EmailActivity" />
+        <Activity name="SmsActivity" />
+        <Activity name="EndActivity" />
+    </Activities>
+</Workflow>
